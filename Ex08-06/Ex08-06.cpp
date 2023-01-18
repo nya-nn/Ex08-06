@@ -191,37 +191,6 @@ public:
 			cout << "宅急便では遅れません";
 		}
 	}
-	/*double GetSize() {
-		double cardboard;
-		size = width + height + depth;
-
-		if (size < 60) {
-			cardboard = 60;
-		}
-		else if (size < 80) {
-			cardboard = 80;
-		}
-		else if (size < 100) {
-			cardboard = 100;
-		}
-		else if (size < 120) {
-			cardboard = 120;
-		}
-		else if (size < 140) {
-			cardboard = 140;
-		}
-		else if (size < 160) {
-			cardboard = 160;
-		}
-		else if (size < 180) {
-			cardboard = 180;
-		}
-		else if (size < 200) {
-			cardboard = 200;
-		}
-
-		return cardboard;
-	}*/
 };
 int main()
 {
