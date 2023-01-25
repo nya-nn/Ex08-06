@@ -157,38 +157,47 @@ public:
 	void GetSize() {
 		int cardboard=0;
 		size = width + height + depth;
-		cout << size << endl;
-		if (size < 60) {
+		if (size <= 60) {
 			cardboard = 60;
 		}
-		else if (size < 80) {
+		else if (size <= 80) {
 			cardboard = 80;
 		}
-		else if (size < 100) {
+		else if (size <= 100) {
 			cardboard = 100;
 		}
-		else if (size < 120) {
+		else if (size <= 120) {
 			cardboard = 120;
 		}
-		else if (size < 140) {
+		else if (size <= 140) {
 			cardboard = 140;
 		}
-		else if (size < 160) {
+		else if (size <= 160) {
 			cardboard = 160;
 		}
-		else if (size < 180) {
+		else if (size <= 170) {
+			cardboard = 170;
+		}
+		else if (size <= 180) {
 			cardboard = 180;
 		}
-		else if (size < 200) {
+		else if (size <= 200) {
 			cardboard = 200;
 		}
 
-		if (cardboard <= 200) {
-			sprintf_s(guidance,16, "%dサイズ", cardboard);
+		if (cardboard <= 160) {
+			sprintf_s(guidance, 16, "宅急便、ゆうパック共に%dサイズ", cardboard);
+			printf("%s", guidance);
+		}
+		else if (cardboard == 170) {
+			cout << "宅急便は180サイズ、ゆうパックは170サイズ";
+		}
+		else if (cardboard <= 200) {
+			sprintf_s(guidance,16, "宅急便は%dサイズ、ゆうパックでは送れません", cardboard);
 			printf("%s", guidance);
 		}
 		else {
-			cout << "宅急便では遅れません";
+			cout << "宅急便、ゆうパックでは送れません";
 		}
 	}
 };
